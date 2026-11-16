@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#09070f" />
+    <meta
+      name="description"
+      content="Когда откроется GTA VI в твоём городе. Регионы PS Store, живые таймеры и время украинской лицензии по Самаре."
+    />
+    <title>Полночь в Вайс-Сити · GTA VI</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300..700&family=Syne:wght@600..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="stage" aria-hidden="true">
+      <video
+        id="reel"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="media/poster.jpg"
+        src="media/night.mp4"
+      ></video>
+      <canvas id="city"></canvas>
+      <div class="grade"></div>
+    </div>
+
+    <header class="top">
+      <a class="mark" href="#answer">
+        <span>VI</span>
+        <small>Midnight</small>
+      </a>
+      <time id="live-clock">--:--:--</time>
+      <div class="picks">
+        <button id="home-btn" type="button">Самара</button>
+        <button id="store-btn" type="button">Украина</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="answer">
+        <div class="hero-copy">
+          <p class="eyebrow" id="kicker">Леонида · 19 ноября 2026</p>
+          <h1 id="headline">Ты сядешь играть</h1>
+          <p class="when" aria-live="off">
+            <span id="when-time">02:00</span>
+            <span id="when-day">Четверг, 19 ноября</span>
+            <span id="when-place">по времени: Самара</span>
+          </p>
+          <div class="count" id="count" role="timer">
+            <div><b data-unit="d">--</b><span>дни</span></div>
+            <div><b data-unit="h">--</b><span>часы</span></div>
+            <div><b data-unit="m">--</b><span>мин</span></div>
+            <div><b data-unit="s">--</b><span>сек</span></div>
+          </div>
+          <div class="second" aria-hidden="true"><i id="second-bar"></i></div>
+          <p class="sentence" id="sentence">
+            Украина, магазин PS Store · 00:00 UTC+2. В Самаре это четверг, 19 ноября, 02:00.
+          </p>
+          <div class="hero-actions">
+            <button id="copy-btn" type="button">Скопировать время</button>
+            <a href="#board">Все регионы</a>
+          </div>
+        </div>
+
+        <aside class="race">
+          <p class="race-label" id="ahead-line">Считаю окна…</p>
+          <div class="feature" id="feature"></div>
+        </aside>
+      </section>
+
+      <section class="wave" aria-label="Волна запуска">
+        <div class="wave-head">
+          <h2>19 часов от Окленда до Мехико</h2>
+          <p>Точка на линейке — твой текущий момент. Нажатие открывает магазин.</p>
+        </div>
+        <div class="rail">
+          <div class="track" id="track"></div>
+          <i class="marker" id="marker"></i>
+        </div>
+        <div class="rail-caption"><span>Новая Зеландия</span><span>Мексика</span></div>
+      </section>
+
+      <section class="facts">
+        <article>
+          <h2>Лицензия, не профиль</h2>
+          <p>
+            Замок висит на аккаунте, который купил игру. Другой пользователь на этой PS5 запускает ту же копию, с теми же часами магазина.
+          </p>
+        </article>
+        <article>
+          <h2>Общая консоль</h2>
+          <p>
+            «Общая консоль и офлайн-игра» раздаёт покупки владельца. Страну PS Store она не переписывает. Пустой новозеландский аккаунт украинскую копию на полночь Окленда не переносит.
+          </p>
+        </article>
+        <article>
+          <h2>Почему MW4 был другим</h2>
+          <p>
+            В октябре у Modern Warfare 4 раньше открывался мультиплеер Activision: игра смотрела регион входа издателя. У GTA VI закрыта сама лицензия PlayStation.
+          </p>
+        </article>
+      </section>
+
+      <section id="board-wrap">
+        <div class="section-head">
+          <h2 id="board-title">Все окна PS Store</h2>
+          <p>Большое время — когда это случится у тебя. Мелкое — полночь витрины.</p>
+        </div>
+        <div class="board" id="board"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p class="sign">Собрал</p>
+        <strong>Максимов Д.А.</strong>
+        <p>Фан-отсчёт. К Rockstar, Take-Two и PlayStation отношения не имеет.</p>
+      </div>
+      <div class="links">
+        <a href="https://t.me/dmitrymx" rel="noopener">Telegram @dmitrymx</a>
+        <a href="https://mxmvdev.ru" rel="noopener">mxmvdev.ru</a>
+      </div>
+      <p class="fine">
+        Метки регионов сняты с витрин PlayStation Store: 15 окон с 11:00 UTC 18 ноября до 06:00 UTC 19 ноября 2026.
+        Rockstar подтвердил полуночный запуск 19 ноября. Витрина может сдвинуть час до релиза.
+        Фон — ночной проезд, Pexels / Foster.
+      </p>
+    </footer>
+
+    <dialog id="picker">
+      <form method="dialog" class="sheet">
+        <div class="sheet-bar"></div>
+        <header>
+          <h2 id="picker-title">Где ты сейчас</h2>
+          <button value="cancel" type="submit" aria-label="Закрыть">Закрыть</button>
+        </header>
+        <input id="picker-search" type="search" placeholder="Город или пояс" autocomplete="off" />
+        <div id="picker-list" class="options"></div>
+      </form>
+    </dialog>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
